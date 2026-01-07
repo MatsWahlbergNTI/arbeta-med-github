@@ -1,11 +1,266 @@
 <!doctype html>
 <html lang="sv">
-    <head>
-        <meta charset="UTF-8" />
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
+	<link rel="stylesheet" href="styles.css">
         <title>Arbeta med GitHub</title>
-    </head>
-    <body>
-        <h1>Arbeta med GitHub</h1>
-        <p>En ny paragraf </p>
+</head>
+
+<body style="font-family:Verdana;color:#0a0a0a;">
+	<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+		<h1>Arbeta med GitHub</h1>
+	</div>
+
+	<div style="overflow:auto">
+		<div class="menu">
+		    <a href="#C1">1 Skapa en katalog för webbsidan</a>
+		    <a href="#C2">2 Skapa en html-fil</a>
+		    <a href="#C3">3 Skapa ett GitHub repo (repository) och koppla till din katalog på din dator.</a>
+		    <a href="#C4">4 Publicera sidan med GitHub pages</a>
+		    <a href="#C5">5 Uppdatera GitHub efter ändring i hemsidan.</a>
+		</div>
+
+        <div class="main">
+		<ol>
+			<li id="C1" class="list-heading">
+				Skapa en katalog för webbsidan
+			</li>
+
+			<ol>
+				<li>
+					Tryck på <b>win+e</b> för att öppna filhanteraren
+				</li>
+				<li>
+					Navigera till katalogen som du vill lägga din 
+					projektkatalog i (exempelvis Dokument/webbutveckling)
+					<img src="images/bild1.jpg" alt="projektkatalog i utforskaren">
+				</li>
+				<li>
+					Har du inte redan en webbutvecklingskatalog för dina projekt så kan du skapa ett 
+					genom att trycka shift+ctrl+n och döpa katalogen till webbutveckling
+				</li>
+				<li>
+					Skapa en ny katalog för din webbsida genom att trycka shift+ctrl+n och skriv vad 
+					du vill att katalogen ska heta. 
+					<br><br>
+					Den här sidans katalog döper jag till arbeta-med-github
+					<img src="images/bild2.jpg" alt="projektkatalog i utforskaren">
+				</li>
+				<li>
+					Gå in i katalogen. Det är här vi ska lägga filerna för hemsidan
+				</li>
+			</ol>
+			<br>
+
+			<li id="C2" class="list-heading">
+				Skapa en html-fil
+				<div style="font-weight: lighter; font-size: medium;">
+					Html-filer är textfiler och det finns flera olika bra editorer för att skriva dem. Är du 
+					osäker på vilken editor att använda så rekommenderar jag att använda Visual 
+					Studio Code (VSCode).
+				</div>	
+			</li>
+			
+			<ol>
+				<li>
+					 Starta VSCode genom att trycka win-knappen och sedan skriva vscode
+					 <img src="images/bild3.jpg" alt="star av vscode">
+				</li>
+				<li>
+					Öppna katalogen som du ska lägga filen i (dokument/webbutveckling/ arbeta-med-github) genom att trycka ctrl+k ctrl+o
+					<img src="images/bild4.jpg" alt="star av vscode">
+					Tryck sedan på select folder
+				</li>
+				<li>
+					Skapa en ny fil som heter index.html
+					<img src="images/bild4-1.jpeg" alt="skapa html-fil">
+					<img src="images/bild4-2.jpeg" alt="skapa html-fil">
+				</li>
+				<li>
+					Skriv text i dokumentet för en grundläggande hemsida:
+					<img src="images/bild5.jpg" alt="grundläggade hemsida">
+				</li>
+				<li>
+					Tryck ctrl+s för att spara
+				</li>
+				<li>
+					Testa hemsidan genom att trycka f5 (du kanske behöver trycka fn+f5) och välj 
+					sedan Web App (chrome)
+					<img src="images/bild6.jpg" alt="se hemsidan">
+					(hemsidan kan även ses genom att öppna index.html i utforskaren)
+					Nu har du gjort en hemsida som vi kan lägga upp på internet
+				</li>
+			</ol>
+			<br>
+
+			<li id="C3" class="list-heading">
+				Skapa ett GitHub repo (repository) och koppla till din katalog på din dator.
+			</li>
+			<ol>
+				<li>
+					Öppna GitHub (github.com) i din webbläsare.
+				</li>
+				<li>
+					 Logga in (skapa ett konto om du inte redan har ett)
+				</li>
+				<li>
+					Skapa ett nytt repo (repository) genom att trycka på den gröna New-knappen
+					<img src="images/bild7.jpg" alt="skapa nytt repo">
+				</li>
+				<li>
+					Fyll i namn på repot
+					<img src="images/bild8.jpg" alt="skapa nytt repo">
+					Observera att visibility ska vara Public eftersom vi ska publicera sidan.
+				</li>
+				<li>
+					Scrolla ner och tryck på Create repository
+					<img src="images/bild9.jpg" alt="skapa nytt repo">
+				</li>
+				<li>
+					Nu är du inne på ditt repo. Scrolla ner lite så finns instruktioner på hur en katalog 
+					på din dator kopplas till GitHub. Observera att några av raderna ska bytas 
+					eftersom vi har skapat en index.html-fil som vi ska lägga upp och behöver därför 
+					inte skapa en README.md-fil.
+					<img src="images/bild10.jpg" alt="skapa nytt repo">
+				</li>
+				<li>
+					De kommandon som vi ska mata in ska skrivas i en terminal/kommandotolk. 
+					Öppna terminalen genom att trycka på adressfältet i utforskaren
+					<img src="images/bild11.jpg" alt="skapa nytt repo">
+					och skriv cmd
+					<img src="images/bild12.jpg" alt="skapa nytt repo">
+					vilket öppnar kommandotolken
+					<img src="images/bild13.jpg" alt="skapa nytt repo">
+					Här ska sökvägen c:\... vara till din katalog med hemsidan.
+				</li>
+				<li>
+					För att initiera git för katalogen:
+					<br>
+					Skriv <i>git init</i>
+					<img src="images/bild14.jpg" alt="skapa nytt repo">
+				</li>
+				<li>
+					För att lägga till alla filer i katalogen i Git skriv:
+					<br>
+					Skriv <i>git add .</i>
+					<img src="images/bild15.jpg" alt="skapa nytt repo">
+					git är programmet som körs, add lägger till och . betyder alla filer och kataloger i 
+					katalogen. Vill man lägga till en specifik fil går det att skriva exempelvis <i>git add 
+					index.html</i>
+				</li>
+				<li>
+					Nästa steg är att ”commita” filerna (bekräftar att vi ska använda filerna ) 
+					genom att skriva:
+					<br>
+					<i>git commit -m ”first commit”</i>
+					<img src="images/bild16.jpg" alt="skapa nytt repo">
+					-m gör att vi ska skriva en kommentar till commiten. Kommentaren gör det 
+					mycket lättare att hålla koll på vad som ändrats i projektet. Speciellt om det är 
+					flera personer som arbetar på samma projekt
+				</li>
+				<li>
+					Fortsätt sedan på samma sätt att mata in rad för rad från instruktionerna på 
+					github.com. Observera att instruktionerna för den näst nedersta raden kommer 
+					vara olika varje gång du skapar ett repository
+					<img src="images/bild10.jpg" alt="skapa nytt repo">
+					<img src="images/bild16-1.jpeg" alt="skapa nytt repo">
+				</li>
+				<li>
+					Kolla sedan så att din GitHub har blivit uppdaterad genom att trycka på f5 
+					(eller uppdatera sidan på annat sätt). Nu ska din kod ligga under code:
+					<img src="images/bild17.jpg" alt="skapa nytt repo">
+				</li>
+			</ol>
+		
+			<li id="C4" class="list-heading">
+				Publicera sidan med GitHub pages
+			</li>
+
+			<ol>
+				<li>
+					Gå till settings på din GitHub sida:
+					<img src="images/bild18.jpg" alt="publicera på github">
+				</li>
+				<li>
+					Gå sedan in i Pages.
+					<br>
+					Scrolla ner tills du ser pages till vänster och tryck på den länken:
+					<img src="images/bild19.jpg" alt="publicera på github">
+				</li>
+				<li>
+					På Pages sidan branch från None till main och sedan spara:
+					<img src="images/bild20.jpg" alt="publicera på github">
+					Det kommer ta någon minut för GitHub att lägga upp sidan på internet.
+				</li>
+				<li>
+					Gå tillbaka till code
+					<br>
+					<img src="images/bild21.jpg" alt="publicera på github">
+				</li>
+				<li>
+					Scrolla ner för att hitta Deployments och clicka sedan på github-pages (det kan 
+					ta någon minut för den att dyka upp så uppdatera sidan tills den kommer fram):
+					<img src="images/bild22.jpg" alt="publicera på github">
+				</li>
+				<li>
+					Clicka på länken under github-pages:
+					<img src="images/bild23.jpg" alt="publicera på github">
+				</li>
+				<li>
+					Om allt har fungerat kommer du nu komma till din hemsida:
+					<img src="images/bild26.jpeg" alt="publicera på github">
+				</li>
+			</ol>	
+			<br>
+
+			<li id="C5" class="list-heading">
+				Uppdatera GitHub efter ändring i hemsidan.
+				<div style="font-weight: lighter; font-size: medium;">
+					Efter att det gjorts ändringar på hemsidan så behöver man uppdatera GitHub. Det 
+					här dokumentet kommer gå igenom hur vi gör det i terminal men det går även bra 
+					att använda sig av inbygda metoder i vscode.
+					Antag att en ny paragraf har lagts till på hemsidan:
+					<img src="images/bild27.jpeg" alt="html kod">
+				</div>	
+			</li>
+			
+			<ol>
+				<li>
+					Efter filer blivit ändrade så gå tillbaka till terminalen och skriv:
+					<br>
+					<i>git add .</i>
+				</li>
+				
+				<li>
+					Skriv sedan git commit –m med en beskrivande kommentar:
+					<br>
+					<i>git commit -m ”added a paragraf”</i>	
+				</li>
+				<li>
+					Pusha sedan ändringarna till GitHub genom att skriva git push:
+					<br>
+					<i>git push</i>
+					<img src="images/bild28.jpeg" alt="add commit och push">
+				</li>
+				<li>
+					Kontrollera att förändringarna kommit in till GitHub:
+					
+					<img src="images/bild29.jpeg" alt="add commit och push">
+				</li>
+
+			</ol>
+		</ol>
+	</div>
+
+	<div class="right">
+		<h2>Länkar</h2>
+		<a href="https://www.w3schools.com/html/default.asp">W3Schools</a>
+		<br>
+		<a href="https://github.com/">GitHub</a>
+	  </div>
+	</div>
+	<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">Mats Wahlberg, NTI Lund</div>
     </body>
 </html>
+
+
